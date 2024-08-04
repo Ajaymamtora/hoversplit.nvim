@@ -50,6 +50,7 @@ local function create_hover_split(command, remain_focused)
 	vim.api.nvim_buf_set_option(hover_bufnr, "bufhidden", "wipe")
 	vim.api.nvim_buf_set_option(hover_bufnr, "modifiable", false)
 	vim.api.nvim_buf_set_option(hover_bufnr, "filetype", "markdown")
+	vim.api.nvim_buf_set_var(hover_bufnr, "custom_type", "hoversplit")
 	vim.api.nvim_buf_set_var(hover_bufnr, "is_lsp_hover_split", true)
 
 	update_hover_content()
